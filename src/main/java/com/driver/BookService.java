@@ -12,10 +12,12 @@ public class BookService {
     BookRepository bookRepository;
 
     public Book createBook(Book book){
+
         return bookRepository.save(book);
     }
 
     public Book findBookById(String id){
+
         return bookRepository.findBookById(Integer.parseInt(id));
     }
 
@@ -24,14 +26,17 @@ public class BookService {
     }
 
     public List<Book> findAllBooks(){
+
         return bookRepository.findAll();
     }
 
     public void deleteAllBooks(){
+
         bookRepository.deleteAll();
     }
 
     public List<Book> findBooksByAuthor(String author){
+
         return bookRepository.findBooksByAuthor(author);
     }
 
